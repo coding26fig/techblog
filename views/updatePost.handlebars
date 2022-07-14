@@ -1,0 +1,58 @@
+
+
+<div>
+<form class="form new-post-form">
+  <div class="form-group">
+    <label for="post-name">post title:</label>
+    <input class="form-input" type="text" id="post-name" name="post-name" />
+  </div>
+  <div class="form-group">
+    <label for="post-desc">description:</label>
+    <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+</form>
+</div>
+<script>
+
+  const newFormHandler = async (event) => {
+      event.preventDefault();
+
+      const name = document.querySelector("#post-name").value.trim();
+      const description = document.querySelector("#post-desc").value.trim();
+
+      let pathname = (window.location.pathname)
+
+      pathname = pathname.split('/')
+
+      let postId = pathname[2]
+      console.log(postId)
+
+      const response = await fetch(`/api/posts/${postId}`, {
+      method: 'PUT',
+      body: JSON.stringify({ name, description }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to create post');
+    }
+    };
+
+  document
+    .querySelector('.new-post-form')
+    .addEventListener('submit', newFormHandler);
+
+
+
+
+ 
+
+
+</script>

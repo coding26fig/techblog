@@ -1,6 +1,6 @@
 # Tech Blog 
 
-([Link to live site](https://pages.github.com/))
+([Link to live site](https://sensationnel-chocolatine-53489.herokuapp.com/))
 
 ## Table of Contents
 * [Technologies Used](#technologies-used)

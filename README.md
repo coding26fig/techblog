@@ -1,6 +1,6 @@
 # Tech Blog 
-> Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+
+([Link to live site](https://pages.github.com/))
 
 ## Table of Contents
 * [Technologies Used](#technologies-used)
@@ -70,13 +70,6 @@ source db/schema.sql
 npm run seed
 npm start
 ```
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
-
 
 ## Contact
 https://github.com/coding26fig/techblog
